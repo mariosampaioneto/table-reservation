@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/error_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/error_message"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_exclamation_outlined" />
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_marginLeft="@dimen/screen_padding"
+        android:layout_marginRight="@dimen/screen_padding"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:gravity="center"
+        android:text="@string/default_generic_error"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/error_btn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_marginLeft="@dimen/screen_padding"
+        android:layout_marginRight="@dimen/screen_padding"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:text="@string/btn_retry"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

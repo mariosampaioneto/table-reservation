@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Table Reservation</string>
+
+    <!--Buttons-->
+    <string name="btn_retry">Retry</string>
+
+    <!--Errors-->
+    <string name="default_generic_error">There was an unexpected error. Please try again later.</string>
+
+    <!--Dialog / Messages-->
+    <string name="loading_message">Loading, please wait...</string>
+
+    <!--Screens-->
+
+    <!--Customer List Screen-->
+    <string name="customer_list_screen_title">Customers</string>
+    <string name="customer_list_search_label">Search</string>
+
+    <!--Tables List Screen-->
+    <string name="table_grid_screen_title">Tables</string>
+</resources>
