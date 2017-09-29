@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import com.mfactory.tablereservation.R;
 import com.mfactory.tablereservation.model.Customer;
 import com.mfactory.tablereservation.module.base.BaseActivity;
+import com.mfactory.tablereservation.module.table.grid.TableGridActivity;
 
 import java.util.List;
 
@@ -74,9 +75,9 @@ public class CustomerListActivity extends BaseActivity implements CustomerListCo
 
     private void setupRecyclerViewCustomers() {
         customerListAdapter = new CustomerListAdapter();
-//        customerListAdapter.setOnCustomerClickedListener((position, customer) -> {
-//            TableMapNavigation.start(CustomerListActivity.this, customer);
-//        });
+        customerListAdapter.setOnCustomerClickedListener((position, customer) -> {
+            TableGridActivity.start(CustomerListActivity.this, customer);
+        });
         mRecyclerView.setAdapter(customerListAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
