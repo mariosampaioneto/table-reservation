@@ -35,7 +35,7 @@ public class TableGridPresenter implements TableGridContract.Presenter {
         if (table.isAvailable()) {
             view.showTableReservationConfirmationDialog(table, customer);
         } else {
-            view.showTableUnavailableDialog();
+            view.showTableUnavailableDialog(table);
         }
     }
 

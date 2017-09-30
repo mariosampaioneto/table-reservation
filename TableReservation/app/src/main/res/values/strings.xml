@@ -19,6 +19,11 @@
     <!--Tables List Screen-->
     <string name="table_grid_screen_title">Tables</string>
 
+    <string name="table_grid_screen_reserved_label">Reserved</string>
+    <string name="table_grid_screen_available_label">Available</string>
+    <string name="table_grid_screen_unavailable_label">Unavailable</string>
+    <string name="table_grid_screen_available_no_customer">-</string>
+
     <string name="table_unavailable_dialog_title">Warning</string>
     <string name="table_unavailable_dialog_text">Table %1$d not available</string>
     <string name="table_unavailable_dialog_btn">OK</string>

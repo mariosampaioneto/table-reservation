@@ -38,7 +38,7 @@ public interface TableGridContract {
 
         void showTableReservationConfirmationDialog(Table table, Customer customer);
 
-        void showTableUnavailableDialog();
+        void showTableUnavailableDialog(Table table);
     }
 
 }

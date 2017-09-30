@@ -36,6 +36,8 @@ public class TableGridActivity extends BaseActivity implements TableGridContract
 
     public static final String EXTRA_CUSTOMER = "EXTRA_CUSTOMER";
 
+    public static final int GRID_SIZE = 3;
+
     @BindView(R.id.customer_name_container)
     ConstraintLayout mCustomerNameContainer;
 
@@ -86,7 +88,7 @@ public class TableGridActivity extends BaseActivity implements TableGridContract
         tableMapAdapter = new TableGridAdapter();
         tableMapAdapter.setOnItemClickListener((view, table, position) -> tableMapPresenter.onTableClicked(table, mCustomer));
         mRecyclerView.setAdapter(tableMapAdapter);
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 4);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, GRID_SIZE);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
     }
@@ -157,10 +159,10 @@ public class TableGridActivity extends BaseActivity implements TableGridContract
     }
 
     @Override
-    public void showTableUnavailableDialog() {
+    public void showTableUnavailableDialog(Table table) {
         dialogUtils.showSimpleDialog(mContext,
                 getString(R.string.table_unavailable_dialog_title),
-                getString(R.string.table_unavailable_dialog_text),
+                String.format(getString(R.string.table_unavailable_dialog_text), table.getNumber()),
                 getString(R.string.table_unavailable_dialog_btn));
     }
 }

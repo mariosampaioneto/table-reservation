@@ -4,10 +4,12 @@ import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mfactory.tablereservation.R;
@@ -44,10 +46,20 @@ public class TableGridAdapter extends RecyclerView.Adapter<TableGridAdapter.View
         Context context = holder.view.getContext();
         if (table.isAvailable()) {
             holder.image.setColorFilter(ContextCompat.getColor(context, R.color.table_available));
-            holder.status.setText("Available");
+            holder.status.setText(context.getString(R.string.table_grid_screen_available_label));
+            holder.customerContainer.setVisibility(View.INVISIBLE);
         } else {
             holder.image.setColorFilter(ContextCompat.getColor(context, R.color.table_unavailable));
-            holder.status.setText("Reserved");
+
+            if (table.getCustomer() != null && !TextUtils.isEmpty(table.getCustomer().getFullName())) {
+                holder.customerContainer.setVisibility(View.VISIBLE);
+                holder.status.setText(context.getString(R.string.table_grid_screen_reserved_label));
+                holder.customerName.setText(table.getCustomer().getFullName());
+            } else {
+                holder.customerContainer.setVisibility(View.INVISIBLE);
+                holder.status.setText(context.getString(R.string.table_grid_screen_unavailable_label));
+                holder.customerName.setText(context.getString(R.string.table_grid_screen_available_no_customer));
+            }
         }
     }
 
@@ -88,6 +100,12 @@ public class TableGridAdapter extends RecyclerView.Adapter<TableGridAdapter.View
 
         @BindView(R.id.status)
         TextView status;
+
+        @BindView(R.id.customer_container)
+        LinearLayout customerContainer;
+
+        @BindView(R.id.customer_name)
+        TextView customerName;
 
         ViewHolder(View view) {
             super(view);
