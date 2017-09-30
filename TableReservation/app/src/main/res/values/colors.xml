@@ -8,4 +8,6 @@
 
     <color name="table_available">#23b71e</color>
     <color name="table_unavailable">#e71515</color>
+
+    <color name="snackbar_error_bkg">#e71515</color>
 </resources>
