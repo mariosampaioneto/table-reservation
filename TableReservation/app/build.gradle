@@ -129,6 +129,9 @@ dependencies {
     //Logs
     compile 'com.jakewharton.timber:timber:4.5.1'
 
+    //Job scheduler
+    compile 'com.firebase:firebase-jobdispatcher:0.8.2'
+
 
     testCompile 'junit:junit:4.12'
 }

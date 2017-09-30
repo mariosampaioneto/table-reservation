@@ -31,6 +31,14 @@
             android:name=".module.table.grid.TableGridActivity"
             android:screenOrientation="portrait" />
 
+        <service
+            android:name=".jobs.ReservationCleanerJob"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
