@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -139,10 +140,12 @@ public class TableGridActivity extends BaseActivity implements TableGridContract
 
     @Override
     public void showUpdateTableFailureMessage(Table table, Customer customer) {
-        dialogUtils.showSimpleDialog(mContext,
-                getString(R.string.table_book_failure_title),
+        Snackbar snackbar = Snackbar.make(mRecyclerView,
                 String.format(getString(R.string.table_book_failure_text), table.getNumber(), customer.getFullName()),
-                getString(R.string.table_book_success_btn));
+                Snackbar.LENGTH_LONG);
+
+        snackbar.getView().setBackgroundColor(ContextCompat.getColor(mContext, R.color.snackbar_error_bkg));
+        snackbar.show();
     }
 
     @Override
