@@ -18,4 +18,21 @@
 
     <!--Tables List Screen-->
     <string name="table_grid_screen_title">Tables</string>
+
+    <string name="table_unavailable_dialog_title">Warning</string>
+    <string name="table_unavailable_dialog_text">Table %1$d not available</string>
+    <string name="table_unavailable_dialog_btn">OK</string>
+
+    <string name="table_confirmation_title">Confirmation</string>
+    <string name="table_confirmation_text">Confirm booking table %1$d for %2$s?</string>
+    <string name="table_confirmation_positive_btn">YES</string>
+    <string name="table_confirmation_negative_btn">NO</string>
+
+    <string name="table_book_success_title">Success</string>
+    <string name="table_book_success_text">Table %1$d was booked successfully for %2$s</string>
+    <string name="table_book_success_btn">OK</string>
+
+    <string name="table_book_failure_title">Warning</string>
+    <string name="table_book_failure_text">There was a problem booking table %1$d for %2$s.\nTry Again.</string>
+    <string name="table_book_failure_btn">OK</string>
 </resources>

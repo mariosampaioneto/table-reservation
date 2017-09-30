@@ -1,6 +1,7 @@
 package com.mfactory.tablereservation.module.table.grid;
 
 
+import com.mfactory.tablereservation.model.Customer;
 import com.mfactory.tablereservation.model.Table;
 import com.mfactory.tablereservation.repositories.TableRepository;
 
@@ -30,7 +31,17 @@ public class TableGridPresenter implements TableGridContract.Presenter {
     }
 
     @Override
-    public void getTables() {
+    public void onTableClicked(Table table, Customer customer) {
+        if (table.isAvailable()) {
+            view.showTableReservationConfirmationDialog(table, customer);
+        } else {
+            view.showTableUnavailableDialog();
+        }
+    }
+
+    @Override
+    public void requestTables() {
+        view.showLoadingLayout();
         tableRepository.getTables()
                 .subscribe(tables -> {
                     view.setTables(tables);
@@ -41,13 +52,17 @@ public class TableGridPresenter implements TableGridContract.Presenter {
     }
 
     @Override
-    public void updateTables(List<Table> tables) {
+    public void updateTables(Customer customer, Table table, List<Table> tables) {
+        table.setAvailable(false);
+        table.setCustomer(customer);
+        tables.set(table.getNumber() - 1, table);
+
         tableRepository.updateTables(tables)
                 .subscribe(tables1 -> {
-                    view.showUpdateTableSuccessMessage();
-                    view.close();
+                    view.showUpdateTableSuccessMessage(table, customer);
+                    requestTables();
                 }, throwable -> {
-                    view.showUpdateTableFailureMessage();
+                    view.showUpdateTableFailureMessage(table, customer);
                 });
     }
 

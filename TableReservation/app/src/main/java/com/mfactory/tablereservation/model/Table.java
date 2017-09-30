@@ -35,4 +35,14 @@ public class Table extends BaseModel {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
+    public boolean isAvailable() {
+        boolean available = false;
+
+        if (this.available != null) {
+            available = this.available;
+        }
+
+        return available;
+    }
 }

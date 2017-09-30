@@ -1,6 +1,7 @@
 package com.mfactory.tablereservation.module.table.grid;
 
 
+import com.mfactory.tablereservation.model.Customer;
 import com.mfactory.tablereservation.model.Table;
 
 import java.util.List;
@@ -13,9 +14,11 @@ public interface TableGridContract {
 
         void unbindView();
 
-        void getTables();
+        void requestTables();
 
-        void updateTables(List<Table> tables);
+        void updateTables(Customer customer, Table table, List<Table> tables);
+
+        void onTableClicked(Table table, Customer customer);
 
     }
 
@@ -29,12 +32,13 @@ public interface TableGridContract {
 
         void setTables(List<Table> tables);
 
-        void showUpdateTableSuccessMessage();
+        void showUpdateTableSuccessMessage(Table table, Customer customer);
 
-        void showUpdateTableFailureMessage();
+        void showUpdateTableFailureMessage(Table table, Customer customer);
 
-        void close();
+        void showTableReservationConfirmationDialog(Table table, Customer customer);
 
+        void showTableUnavailableDialog();
     }
 
 }
