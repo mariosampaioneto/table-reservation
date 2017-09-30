@@ -7,6 +7,7 @@ import com.mfactory.tablereservation.network.NetworkModule;
 import com.mfactory.tablereservation.network.services.ServiceModule;
 import com.mfactory.tablereservation.repositories.RepositoryModule;
 import com.mfactory.tablereservation.repositories.provider.ProviderModule;
+import com.mfactory.tablereservation.service.ReservationCleanerService;
 
 import javax.inject.Singleton;
 
@@ -28,6 +29,6 @@ public interface MainComponent {
 
     void inject(TableGridActivity activity);
 
-//    void inject(TableMapTaskService service);
+    void inject(ReservationCleanerService service);
 
 }
