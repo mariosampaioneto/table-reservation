@@ -66,7 +66,7 @@ public class CustomerListActivity extends BaseActivity implements CustomerListCo
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_customer_list, menu);
+        inflater.inflate(R.menu.menu_customer_search, menu);
         MenuItem item = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         setupSearchView(item, searchView);
