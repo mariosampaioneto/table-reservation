@@ -29,6 +29,7 @@ public class CustomerListPresenter implements CustomerListContract.Presenter {
 
     @Override
     public void requestCustomerList() {
+        view.showLoadingLayout();
         customerRepository.getCustomers()
                 .subscribe(customers -> {
                     view.setCustomers(customers);
