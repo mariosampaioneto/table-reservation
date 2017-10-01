@@ -12,11 +12,7 @@ import com.mfactory.tablereservation.MainComponent;
 public class BaseService extends JobService {
 
     protected MainComponent getMainComponent() {
-        return getMainApplication().getComponent();
-    }
-
-    protected MainApplication getMainApplication() {
-        return (MainApplication) getApplication();
+        return ((MainApplication) getApplication()).getComponent();
     }
 
     @Override

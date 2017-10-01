@@ -1,7 +1,6 @@
 package com.mfactory.tablereservation;
 
 import com.mfactory.tablereservation.module.customer.list.CustomerListActivity;
-import com.mfactory.tablereservation.module.customer.list.CustomerListModule;
 import com.mfactory.tablereservation.module.table.grid.TableGridActivity;
 import com.mfactory.tablereservation.network.NetworkModule;
 import com.mfactory.tablereservation.network.services.ServiceModule;
@@ -19,9 +18,7 @@ import dagger.Component;
         NetworkModule.class,
         RepositoryModule.class,
         ProviderModule.class,
-        ServiceModule.class,
-        CustomerListModule.class
-//        TableMapModule.class
+        ServiceModule.class
 })
 public interface MainComponent {
 
