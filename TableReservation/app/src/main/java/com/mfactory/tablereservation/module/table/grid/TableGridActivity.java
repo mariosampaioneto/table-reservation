@@ -136,6 +136,8 @@ public class TableGridActivity extends BaseActivity implements TableGridContract
         Snackbar.make(mRecyclerView,
                 String.format(getString(R.string.table_book_success_text), table.getNumber(), customer.getFullName()),
                 Snackbar.LENGTH_LONG).show();
+
+        tableMapAdapter.notifyItemChanged(tableMapAdapter.getTables().indexOf(table));
     }
 
     @Override

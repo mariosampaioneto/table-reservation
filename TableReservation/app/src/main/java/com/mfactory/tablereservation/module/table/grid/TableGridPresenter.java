@@ -60,7 +60,6 @@ public class TableGridPresenter implements TableGridContract.Presenter {
         tableRepository.updateTables(tables)
                 .subscribe(tables1 -> {
                     view.showUpdateTableSuccessMessage(table, customer);
-                    requestTables();
                 }, throwable -> {
                     view.showUpdateTableFailureMessage(table, customer);
                 });
