@@ -72,6 +72,8 @@ public class TableGridTest {
 
     @After
     public void tearDown() throws Exception {
+        //cleaning mocks
+        Hawk.deleteAll();
         solo.finishOpenedActivities();
     }
 }
