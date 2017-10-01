@@ -3,7 +3,7 @@ package com.mfactory.tablereservation.repository;
 
 import com.mfactory.tablereservation.model.Customer;
 import com.mfactory.tablereservation.network.services.Services;
-import com.mfactory.tablereservation.repository.provider.CustomerProvider;
+import com.mfactory.tablereservation.repository.provider.CustomerLocalDataProvider;
 
 import java.util.List;
 
@@ -16,11 +16,11 @@ import io.reactivex.schedulers.Schedulers;
 
 public class CustomerRepository {
 
-    private CustomerProvider provider;
+    private CustomerLocalDataProvider provider;
     private Services services;
 
     @Inject
-    public CustomerRepository(CustomerProvider provider, Services services) {
+    public CustomerRepository(CustomerLocalDataProvider provider, Services services) {
         this.provider = provider;
         this.services = services;
     }
@@ -45,7 +45,7 @@ public class CustomerRepository {
                 .cache()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .concatMap(customers -> provider.update(customers));
+                .concatMap(customers -> provider.replace(customers));
     }
 
 }

@@ -2,7 +2,7 @@ package com.mfactory.tablereservation.repository;
 
 import com.mfactory.tablereservation.model.Table;
 import com.mfactory.tablereservation.network.services.Services;
-import com.mfactory.tablereservation.repository.provider.TableProvider;
+import com.mfactory.tablereservation.repository.provider.TableLocalDataProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +16,17 @@ import io.reactivex.schedulers.Schedulers;
 
 public class TableRepository {
 
-    private TableProvider provider;
+    private TableLocalDataProvider provider;
     private Services services;
 
     @Inject
-    public TableRepository(TableProvider provider, Services services) {
+    public TableRepository(TableLocalDataProvider provider, Services services) {
         this.provider = provider;
         this.services = services;
     }
 
     public Flowable<List<Table>> updateTables(List<Table> tables) {
-        return provider.update(tables);
+        return provider.replace(tables);
     }
 
     public Maybe<List<Table>> getTables() {
@@ -64,7 +64,7 @@ public class TableRepository {
                     }
                     return tables;
                 })
-                .flatMap(tables -> provider.update(tables));
+                .flatMap(tables -> provider.replace(tables));
     }
 
 }

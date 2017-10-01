@@ -5,7 +5,7 @@ import com.mfactory.tablereservation.module.table.grid.TableGridActivity;
 import com.mfactory.tablereservation.network.NetworkModule;
 import com.mfactory.tablereservation.network.services.ServiceModule;
 import com.mfactory.tablereservation.repository.RepositoryModule;
-import com.mfactory.tablereservation.repository.provider.ProviderModule;
+import com.mfactory.tablereservation.repository.provider.LocalDataProviderModule;
 import com.mfactory.tablereservation.service.ReservationCleanerService;
 
 import javax.inject.Singleton;
@@ -17,7 +17,7 @@ import dagger.Component;
         ApplicationModule.class,
         NetworkModule.class,
         RepositoryModule.class,
-        ProviderModule.class,
+        LocalDataProviderModule.class,
         ServiceModule.class
 })
 public interface MainComponent {

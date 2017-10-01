@@ -2,8 +2,8 @@ package com.mfactory.tablereservation.repository;
 
 
 import com.mfactory.tablereservation.network.services.Services;
-import com.mfactory.tablereservation.repository.provider.CustomerProvider;
-import com.mfactory.tablereservation.repository.provider.TableProvider;
+import com.mfactory.tablereservation.repository.provider.CustomerLocalDataProvider;
+import com.mfactory.tablereservation.repository.provider.TableLocalDataProvider;
 
 import dagger.Module;
 import dagger.Provides;
@@ -14,13 +14,13 @@ public class RepositoryModule {
 
     @Provides
     @Reusable
-    public CustomerRepository provideCustomerRepository(CustomerProvider provider, Services services) {
+    public CustomerRepository provideCustomerRepository(CustomerLocalDataProvider provider, Services services) {
         return new CustomerRepository(provider, services);
     }
 
     @Provides
     @Reusable
-    public TableRepository provideTableRepository(TableProvider provider, Services services) {
+    public TableRepository provideTableRepository(TableLocalDataProvider provider, Services services) {
         return new TableRepository(provider, services);
     }
 

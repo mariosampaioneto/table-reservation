@@ -9,11 +9,11 @@ import java.util.List;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 
-public class TableProvider {
+public class TableLocalDataProvider {
 
     private static final String TAG = "TABLE_CACHE";
 
-    public Flowable<List<Table>> update(List<Table> tables) {
+    public Flowable<List<Table>> replace(List<Table> tables) {
         return Flowable.create(e -> {
             try {
                 Hawk.delete(TAG);
