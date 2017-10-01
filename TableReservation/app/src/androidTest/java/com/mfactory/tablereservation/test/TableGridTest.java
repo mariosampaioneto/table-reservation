@@ -26,11 +26,15 @@ import static junit.framework.Assert.assertTrue;
 @RunWith(AndroidJUnit4.class)
 public class TableGridTest {
 
-    public TableGridTest() {
-    }
-
     @Rule
-    public ActivityTestRule<CustomerListActivity> mActivityRule = new ActivityTestRule<>(CustomerListActivity.class);
+    public ActivityTestRule<TableGridActivity> mActivityRule = new ActivityTestRule<TableGridActivity>(TableGridActivity.class) {
+        @Override
+        protected Intent getActivityIntent() {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.putExtra(TableGridActivity.EXTRA_CUSTOMER, new Customer(1, "Mário", "Sampaio"));
+            return intent;
+        }
+    };
 
     private Solo solo;
 
@@ -45,7 +49,6 @@ public class TableGridTest {
 
     @Test
     public void listIsFilled() {
-        navigateToTableGridActivity();
         solo.waitForView(solo.getView(R.id.recyclerview));
         RecyclerView recyclerView = (RecyclerView) solo.getView(R.id.recyclerview);
 
@@ -54,7 +57,6 @@ public class TableGridTest {
 
     @Test
     public void reservationIsWorking() {
-        navigateToTableGridActivity();
         solo.waitForView(solo.getView(R.id.recyclerview));
         RecyclerView recyclerView = (RecyclerView) solo.getView(R.id.recyclerview);
 
@@ -66,17 +68,6 @@ public class TableGridTest {
         solo.clickOnText("YES");
 
         assertTrue("Booking success", solo.searchText("booked successfully"));
-    }
-
-    private void navigateToTableGridActivity() {
-        solo.unlockScreen();
-        solo.waitForActivity(CustomerListActivity.class);
-        solo.waitForView(solo.getView(R.id.recyclerview));
-
-        RecyclerView recyclerView = (RecyclerView) solo.getView(R.id.recyclerview);
-        View listItem = recyclerView.getChildAt(0);
-
-        solo.clickOnView(listItem);
     }
 
     @After
