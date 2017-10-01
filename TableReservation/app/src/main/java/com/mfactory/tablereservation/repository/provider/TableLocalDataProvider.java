@@ -11,7 +11,7 @@ import io.reactivex.Flowable;
 
 public class TableLocalDataProvider {
 
-    private static final String TAG = "TABLE_CACHE";
+    public static final String TAG = "TABLE_CACHE";
 
     public Flowable<List<Table>> replace(List<Table> tables) {
         return Flowable.create(e -> {

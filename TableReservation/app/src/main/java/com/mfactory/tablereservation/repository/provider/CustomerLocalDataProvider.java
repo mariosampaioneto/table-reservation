@@ -11,7 +11,7 @@ import io.reactivex.Flowable;
 
 public class CustomerLocalDataProvider {
 
-    private static final String TAG = "CUSTOMER_CACHE";
+    public static final String TAG = "CUSTOMER_CACHE";
 
     public Flowable<List<Customer>> replace(List<Customer> customers) {
         return Flowable.create(e -> {
