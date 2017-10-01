@@ -1,9 +1,9 @@
-package com.mfactory.tablereservation.repositories;
+package com.mfactory.tablereservation.repository;
 
 
 import com.mfactory.tablereservation.network.services.Services;
-import com.mfactory.tablereservation.repositories.provider.CustomerProvider;
-import com.mfactory.tablereservation.repositories.provider.TableProvider;
+import com.mfactory.tablereservation.repository.provider.CustomerProvider;
+import com.mfactory.tablereservation.repository.provider.TableProvider;
 
 import dagger.Module;
 import dagger.Provides;

@@ -3,7 +3,7 @@ package com.mfactory.tablereservation.module.table.grid;
 
 import com.mfactory.tablereservation.model.Customer;
 import com.mfactory.tablereservation.model.Table;
-import com.mfactory.tablereservation.repositories.TableRepository;
+import com.mfactory.tablereservation.repository.TableRepository;
 
 import java.util.List;
 

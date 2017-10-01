@@ -1,4 +1,4 @@
-package com.mfactory.tablereservation.repositories.provider;
+package com.mfactory.tablereservation.repository.provider;
 
 import dagger.Module;
 import dagger.Provides;

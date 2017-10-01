@@ -5,8 +5,8 @@ import com.mfactory.tablereservation.module.customer.list.CustomerListModule;
 import com.mfactory.tablereservation.module.table.grid.TableGridActivity;
 import com.mfactory.tablereservation.network.NetworkModule;
 import com.mfactory.tablereservation.network.services.ServiceModule;
-import com.mfactory.tablereservation.repositories.RepositoryModule;
-import com.mfactory.tablereservation.repositories.provider.ProviderModule;
+import com.mfactory.tablereservation.repository.RepositoryModule;
+import com.mfactory.tablereservation.repository.provider.ProviderModule;
 import com.mfactory.tablereservation.service.ReservationCleanerService;
 
 import javax.inject.Singleton;

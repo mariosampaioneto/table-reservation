@@ -1,9 +1,9 @@
-package com.mfactory.tablereservation.repositories;
+package com.mfactory.tablereservation.repository;
 
 
 import com.mfactory.tablereservation.model.Customer;
 import com.mfactory.tablereservation.network.services.Services;
-import com.mfactory.tablereservation.repositories.provider.CustomerProvider;
+import com.mfactory.tablereservation.repository.provider.CustomerProvider;
 
 import java.util.List;
 
@@ -25,7 +25,6 @@ public class CustomerRepository {
         this.services = services;
     }
 
-    @SuppressWarnings("unchecked")
     public Maybe<List<Customer>> getCustomers() {
         Flowable<List<Customer>> local = getCustomersLocal();
         Flowable<List<Customer>> remote = getCustomersRemote();

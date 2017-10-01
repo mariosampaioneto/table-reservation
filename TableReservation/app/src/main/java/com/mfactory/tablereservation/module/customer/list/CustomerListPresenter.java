@@ -1,6 +1,6 @@
 package com.mfactory.tablereservation.module.customer.list;
 
-import com.mfactory.tablereservation.repositories.CustomerRepository;
+import com.mfactory.tablereservation.repository.CustomerRepository;
 
 import javax.inject.Inject;
 

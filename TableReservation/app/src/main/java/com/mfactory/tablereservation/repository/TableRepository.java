@@ -1,8 +1,8 @@
-package com.mfactory.tablereservation.repositories;
+package com.mfactory.tablereservation.repository;
 
 import com.mfactory.tablereservation.model.Table;
 import com.mfactory.tablereservation.network.services.Services;
-import com.mfactory.tablereservation.repositories.provider.TableProvider;
+import com.mfactory.tablereservation.repository.provider.TableProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,6 @@ public class TableRepository {
         return provider.update(tables);
     }
 
-    @SuppressWarnings("unchecked")
     public Maybe<List<Table>> getTables() {
         Flowable<List<Table>> local = getTablesLocal();
         Flowable<List<Table>> remote = getTablesRemote();
@@ -39,7 +38,7 @@ public class TableRepository {
                 .firstElement();
     }
 
-    public Flowable<List<Table>> fetchTables() {
+    public Flowable<List<Table>> resetLocalCache() {
         return getTablesRemote();
     }
 

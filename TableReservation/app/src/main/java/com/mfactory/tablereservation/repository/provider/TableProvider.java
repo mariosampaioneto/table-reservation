@@ -1,4 +1,4 @@
-package com.mfactory.tablereservation.repositories.provider;
+package com.mfactory.tablereservation.repository.provider;
 
 import com.mfactory.tablereservation.model.Table;
 import com.orhanobut.hawk.Hawk;
@@ -11,24 +11,12 @@ import io.reactivex.Flowable;
 
 public class TableProvider {
 
-    private static final String TAG = TableProvider.class.getSimpleName();
+    private static final String TAG = "TABLE_CACHE";
 
     public Flowable<List<Table>> update(List<Table> tables) {
         return Flowable.create(e -> {
             try {
                 Hawk.delete(TAG);
-                Hawk.put(TAG, tables);
-                e.onNext(tables);
-                e.onComplete();
-            } catch (Exception exception) {
-                e.onError(exception);
-            }
-        }, BackpressureStrategy.DROP);
-    }
-
-    public Flowable<List<Table>> add(List<Table> tables) {
-        return Flowable.create(e -> {
-            try {
                 Hawk.put(TAG, tables);
                 e.onNext(tables);
                 e.onComplete();
@@ -45,17 +33,4 @@ public class TableProvider {
         }
         return Flowable.just(new ArrayList<>());
     }
-
-    public Flowable<Void> delete() {
-        return Flowable.create(e -> {
-            try {
-                Hawk.delete(TAG);
-                e.onNext(null);
-                e.onComplete();
-            } catch (Exception exception) {
-                e.onError(exception);
-            }
-        }, BackpressureStrategy.DROP);
-    }
-
 }

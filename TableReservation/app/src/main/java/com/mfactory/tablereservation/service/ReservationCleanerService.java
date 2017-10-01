@@ -1,6 +1,6 @@
 package com.mfactory.tablereservation.service;
 
-import com.mfactory.tablereservation.repositories.TableRepository;
+import com.mfactory.tablereservation.repository.TableRepository;
 import com.mfactory.tablereservation.service.base.BaseService;
 
 import javax.inject.Inject;
@@ -24,7 +24,7 @@ public class ReservationCleanerService extends BaseService {
     @Override
     public boolean onStartJob(com.firebase.jobdispatcher.JobParameters job) {
         Timber.d("### Cleaning all tables reservation ###");
-        tableRepository.fetchTables().subscribe();
+        tableRepository.resetLocalCache().subscribe();
 
         return false;
     }
