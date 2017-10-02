@@ -2,8 +2,11 @@ package com.mfactory.tablereservation.module.customer.list;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -64,6 +67,11 @@ public class CustomerListActivity extends BaseActivity implements CustomerListCo
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_customer_search, menu);
         MenuItem item = menu.findItem(R.id.action_search);
+        Drawable drawable = item.getIcon();
+        if (drawable != null) {
+            drawable.mutate();
+            drawable.setColorFilter(ContextCompat.getColor(mContext, R.color.screen_title), PorterDuff.Mode.SRC_ATOP);
+        }
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         setupSearchView(item, searchView);
         return true;
