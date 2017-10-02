@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Local Restaurant</string>
+
+    <!--Buttons-->
+    <string name="btn_retry">Retry</string>
+
+    <!--Errors-->
+    <string name="default_generic_error">There was an unexpected error. Please try again later.</string>
+
+    <!--Dialog / Messages-->
+    <string name="loading_message">Loading, please wait...</string>
+
+    <!--Genera;-->
+    <string name="restaurant_name">Local Restaurant</string>
+
+    <!--Screens-->
+
+    <!--Customer List Screen-->
+    <string name="customer_list_screen_title">Customers</string>
+    <string name="customer_list_search_label">Search</string>
+
+    <!--Tables List Screen-->
+    <string name="table_grid_screen_title">Tables</string>
+
+    <string name="table_grid_screen_reserved_label">Reserved</string>
+    <string name="table_grid_screen_available_label">Available</string>
+    <string name="table_grid_screen_unavailable_label">Unavailable</string>
+    <string name="table_grid_screen_available_no_customer">-</string>
+
+    <string name="table_unavailable_dialog_title">Warning</string>
+    <string name="table_unavailable_dialog_text">Table %1$d not available</string>
+    <string name="table_unavailable_dialog_btn">OK</string>
+
+    <string name="table_confirmation_title">Confirmation</string>
+    <string name="table_confirmation_text">Confirm booking table %1$d for %2$s?</string>
+    <string name="table_confirmation_positive_btn">YES</string>
+    <string name="table_confirmation_negative_btn">NO</string>
+
+    <string name="table_book_success_title">Success</string>
+    <string name="table_book_success_text">Table %1$d was booked successfully for %2$s</string>
+    <string name="table_book_success_btn">OK</string>
+
+    <string name="table_book_failure_title">Warning</string>
+    <string name="table_book_failure_text">There was a problem booking table %1$d for %2$s.\nTry Again.</string>
+    <string name="table_book_failure_btn">OK</string>
+</resources>
