@@ -45,10 +45,12 @@ public class TableGridAdapter extends RecyclerView.Adapter<TableGridAdapter.View
 
         Context context = holder.view.getContext();
         if (table.isAvailable()) {
+            holder.image.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_empty_table));
             holder.image.setColorFilter(ContextCompat.getColor(context, R.color.table_available));
             holder.status.setText(context.getString(R.string.table_grid_screen_available_label));
             holder.customerContainer.setVisibility(View.INVISIBLE);
         } else {
+            holder.image.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_table));
             holder.image.setColorFilter(ContextCompat.getColor(context, R.color.table_unavailable));
 
             if (table.getCustomer() != null && !TextUtils.isEmpty(table.getCustomer().getFullName())) {
