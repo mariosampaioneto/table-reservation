@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Table Reservation</string>
+    <string name="app_name">Local Restaurant</string>
 
     <!--Buttons-->
     <string name="btn_retry">Retry</string>
@@ -9,6 +9,9 @@
 
     <!--Dialog / Messages-->
     <string name="loading_message">Loading, please wait...</string>
+
+    <!--Genera;-->
+    <string name="restaurant_name">Local Restaurant</string>
 
     <!--Screens-->
 

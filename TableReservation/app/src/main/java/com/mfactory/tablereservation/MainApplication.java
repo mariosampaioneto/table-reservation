@@ -57,7 +57,7 @@ public class MainApplication extends Application {
                 .setTag(ReservationCleanerService.TAG)
                 .setRecurring(true)
                 .setLifetime(Lifetime.FOREVER)
-                .setTrigger(Trigger.executionWindow((int) MINUTES.toSeconds(10) - 1, (int) MINUTES.toSeconds(10)))
+                .setTrigger(Trigger.executionWindow((int) (MINUTES.toSeconds(10)) - 1, (int) MINUTES.toSeconds(10)))
                 .setReplaceCurrent(true)
                 .setRetryStrategy(RetryStrategy.DEFAULT_LINEAR)
                 .setConstraints(Constraint.ON_ANY_NETWORK)

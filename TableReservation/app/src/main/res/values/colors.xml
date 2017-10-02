@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#f98217</color>
 
-    <color name="app_background">#FFFFFF</color>
+    <!--launch-->
+    <color name="launch_background">#F44336</color>
+    <color name="launch_text_color">#FFFFFF</color>
+
+    <!--customer list-->
+    <color name="customer_icon">#757575</color>
+    <color name="customer_name">#212121</color>
+    <color name="customer_arrow">#212121</color>
+    <color name="divider">#BDBDBD</color>
+
+    <!--table grid-->
+    <color name="selected_customer_bkg">#FFFFFF</color>
 
     <color name="table_available">#23b71e</color>
     <color name="table_unavailable">#e71515</color>
 
     <color name="snackbar_error_bkg">#e71515</color>
+
+    <!--all screens-->
+    <color name="screen_title">#FFFFFF</color>
+    <color name="app_background">#efefef</color>
+
 </resources>
