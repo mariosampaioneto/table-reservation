@@ -7,8 +7,7 @@
     android:background="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,16 +15,20 @@
 
         <ImageView
             android:id="@+id/thumb"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:tint="@color/customer_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/customer_name"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_user"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/ic_customer"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintTop_creator="1" />
@@ -33,11 +36,10 @@
 
         <TextView
             android:id="@+id/customer_name"
+            style="@style/AppTheme.Customer.Name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:gravity="start"
@@ -46,27 +48,28 @@
             app:layout_constraintLeft_toRightOf="@+id/thumb"
             app:layout_constraintRight_toLeftOf="@+id/item_customer_arrow"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_conversion_absoluteHeight="16dp"
-            tools:layout_conversion_absoluteWidth="36dp"
-            tools:layout_conversion_absoluteX="70dp"
-            tools:layout_conversion_absoluteY="26dp"
-            tools:text="Name"
-            app:layout_constraintVertical_bias="0.0" />
+            tools:text="Name" />
 
 
         <ImageView
             android:id="@+id/item_customer_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/customer_name"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_next_arrow"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintVertical_bias="0.555" />
+            app:srcCompat="@drawable/ic_next_arrow" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 

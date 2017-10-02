@@ -13,4 +13,14 @@
         <!--<item name="md_regular_font">SimplonBP-Regular.ttf</item>-->
     </style>
 
+    <style name="AppTheme.Screen.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/screen_title</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.Customer.Name" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/customer_name</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

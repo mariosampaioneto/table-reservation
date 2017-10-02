@@ -10,6 +10,9 @@
     <!--Dialog / Messages-->
     <string name="loading_message">Loading, please wait...</string>
 
+    <!--Genera;-->
+    <string name="restaurant_name">Local Restaurant</string>
+
     <!--Screens-->
 
     <!--Customer List Screen-->

@@ -1,6 +1,7 @@
 package com.mfactory.tablereservation.module.launch;
 
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.mfactory.tablereservation.R;
 import com.mfactory.tablereservation.module.base.BaseActivity;
@@ -13,6 +14,7 @@ public class LaunchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 
-        CustomerListActivity.start(this);
+        Handler handler = new Handler();
+        handler.postDelayed(() -> CustomerListActivity.start(mContext), 3000);
     }
 }
