@@ -12,6 +12,16 @@ public class Table extends BaseModel {
     private Boolean available;
     private Customer customer;
 
+    public Table() {
+
+    }
+
+    public Table(int number, Boolean available, Customer customer) {
+        this.number = number;
+        this.available = available;
+        this.customer = customer;
+    }
+
     public int getNumber() {
         return number;
     }
