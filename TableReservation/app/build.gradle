@@ -19,9 +19,9 @@ android {
         applicationId "com.mfactory.tablereservation"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 16100
+        versionCode 16110
         // 16 -> minimum sdk, 100 -> current version. ABI version added to start of versionCode, ex: x86_64 -> 916100
-        versionName "1.0.0"
+        versionName "1.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
 
