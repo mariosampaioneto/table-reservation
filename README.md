@@ -23,11 +23,9 @@ Build a seamless, easy and scalable code.
 11. Firebase JobDispatcher for out-app service scheduling
 12. ABI split for smaller apk
 13. Multi-locale ready
+14. And there's more! - It comes in 3 stunning flavors!!!
 
-# And there's more!
-## It comes in 3 stunning flavors!!!
-
-###Local Restaurant - [Download apk here](https://github.com/mariosampaioneto/table-reservation/raw/master/releases/table-reservations-1.1.0-localrestaurant.apk)
+##Local Restaurant - [Download apk here](https://github.com/mariosampaioneto/table-reservation/raw/master/releases/table-reservations-1.1.0-localrestaurant.apk)
 
 <img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/local_restaurant_icon.png" width="100">
 
@@ -35,7 +33,7 @@ The everyday restaurant that you love!
 
 <img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/local_restaurant_1.png" width="200"><img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/local_restaurant_2.png" width="200"><img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/local_restaurant_3.png" width="200">
 
-###Pizza Palace - [Download apk here](https://github.com/mariosampaioneto/table-reservation/raw/master/releases/table-reservations-1.1.0-pizzapalace.apk)
+##Pizza Palace - [Download apk here](https://github.com/mariosampaioneto/table-reservation/raw/master/releases/table-reservations-1.1.0-pizzapalace.apk)
 
 <img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/pizza_palace_icon.png" width="100">
 
@@ -43,7 +41,7 @@ Looking for some great pizza?! That's your place!
 
 <img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/pizza_palace_1.png" width="200"><img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/pizza_palace_2.png" width="200"><img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/pizza_palace_3.png" width="200">
 
-###Zombie Playground - [Download apk here](https://github.com/mariosampaioneto/table-reservation/raw/master/releases/table-reservations-1.1.0-zombieplayground.apk)
+##Zombie Playground - [Download apk here](https://github.com/mariosampaioneto/table-reservation/raw/master/releases/table-reservations-1.1.0-zombieplayground.apk)
 
 <img src="https://github.com/mariosampaioneto/table-reservation/blob/master/screenshots/zombie_playground_icon.png" width="100">
 
