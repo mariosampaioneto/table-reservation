@@ -5,10 +5,6 @@ import com.firebase.jobdispatcher.JobService;
 import com.mfactory.tablereservation.MainApplication;
 import com.mfactory.tablereservation.MainComponent;
 
-/**
- * Created by mairaamelia on 30/09/17.
- */
-
 public class BaseService extends JobService {
 
     protected MainComponent getMainComponent() {

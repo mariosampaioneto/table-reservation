@@ -23,10 +23,6 @@ import butterknife.OnClick;
 import butterknife.Optional;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-/**
- * Created by mario_1a on 29/09/17.
- */
-
 public class BaseActivity extends AppCompatActivity {
     public Context mContext;
 

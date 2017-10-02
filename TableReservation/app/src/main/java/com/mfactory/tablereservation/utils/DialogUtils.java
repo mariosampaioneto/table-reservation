@@ -7,10 +7,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-/**
- * Created by mairaamelia on 30/09/17.
- */
-
 @Singleton
 public class DialogUtils {
 

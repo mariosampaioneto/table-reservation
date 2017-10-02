@@ -29,10 +29,6 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 
-/**
- * Created by mario_1a on 29/09/17.
- */
-
 public class TableGridActivity extends BaseActivity implements TableGridContract.View {
 
     public static final String EXTRA_CUSTOMER = "EXTRA_CUSTOMER";

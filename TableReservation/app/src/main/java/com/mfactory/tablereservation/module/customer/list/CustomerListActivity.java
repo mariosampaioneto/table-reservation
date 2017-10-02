@@ -25,10 +25,6 @@ import butterknife.BindView;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
-/**
- * Created by mario_1a on 29/09/17.
- */
-
 public class CustomerListActivity extends BaseActivity implements CustomerListContract.View {
 
     @BindView(R.id.recyclerview)
