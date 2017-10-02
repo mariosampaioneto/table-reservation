@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Table Reservation</string>
+    <string name="app_name">Local Restaurant</string>
 
     <!--Buttons-->
     <string name="btn_retry">Retry</string>
